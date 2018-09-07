@@ -1,9 +1,21 @@
+.container{
+    background-color: #EEF36A;
+}
+
+.apiData{
+    background-color: #3F3047;
+}
+
+.data:hover span{
+    display: none;
+}
+
 div{
     text-align: center;
     padding: 10px;
 }
 
-.container {
+.data {
     height: 200px;
     width: 200px;
     position: relative;
@@ -16,7 +28,9 @@ div{
     width: 200px;
     opacity: 0.7;
     filter: blur(2px);
-    /* padding: 5px; */
+    transition: opacity 0.5s;
+    transition: filter 0.2s;
+    padding: 10px;
 }
 
 img#thumbnails:hover {
@@ -27,6 +41,9 @@ img#thumbnails:hover {
 .centered{
     font-weight: bold;
     font-family: monospace;
+    color: white;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: black;
     position: absolute;
     top: 50%;
     left: 50%;

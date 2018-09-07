@@ -1,15 +1,17 @@
-<div>
-  <h1>Some Music App</h1>
-</div>
+<div class="container">
+  <div>
+    <h1>Music App</h1>
+  </div>
 
-<div>
-  <input type="text" class="type" (keyup.enter)="getData()" [(ngModel)] = "inputText">
-  <input type="button" value="Fetch Data" (click)="getData()">
-</div>
+  <div class="inputData">
+    <input type="text" class="type" placeholder="Artist, Song, or Lyrics" (keyup.enter)="getData()" [(ngModel)] = "inputText">
+    <input type="button" class="button btn-primary" value="Fetch Data" (click)="getData()">
+  </div>
 
-<div id="apiData" class="row">
-    <div class="container" class="col" *ngFor="let r of result">
-      <img id="thumbnails" src="{{r.result.header_image_thumbnail_url}}">
-      <span class="centered">{{r.result.full_title}}</span>
+  <div class="apiData row">
+      <div class="data col" *ngFor="let r of result">
+        <img id="thumbnails" src="{{r.result.header_image_thumbnail_url}}">
+        <span class="centered">{{r.result.full_title}}</span>
+    </div>
   </div>
 </div>
